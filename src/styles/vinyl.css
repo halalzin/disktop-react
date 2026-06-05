@@ -1,0 +1,52 @@
+
+
+.vinyl-wrap {
+  position: relative;
+  width: 260px; height: 260px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+  filter: drop-shadow(0 8px 32px var(--shadow));
+  transition: transform 0.08s ease;
+}
+.vinyl-wrap:hover  { transform: scale(1.03); }
+.vinyl-wrap:active { transform: scale(0.96); }
+.vinyl-svg { width: 100%; height: 100%; }
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.vinyl-slow   { animation: spin 5.0s linear infinite; }
+.vinyl-medium { animation: spin 3.0s linear infinite; }
+.vinyl-fast   { animation: spin 1.5s linear infinite; }
+
+.click-burst {
+  position: absolute;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 15px; font-weight: 700;
+  color: var(--salmon);
+  transform: translate(-50%, -50%);
+  animation: burst 0.65s ease-out forwards;
+  white-space: nowrap;
+  z-index: 10;
+}
+@keyframes burst {
+  0%   { opacity: 1; transform: translate(-50%,-60%)  scale(1);    }
+  100% { opacity: 0; transform: translate(-50%,-140%) scale(1.35); }
+}
+
+.vinyl-ring-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  opacity: 0;
+  pointer-events: none;
+  animation: ringPulse 0.4s ease-out forwards;
+}
+@keyframes ringPulse {
+  0%   { opacity: 0.8; transform: scale(1);    }
+  100% { opacity: 0;   transform: scale(1.18); }
+}
+
+@media (max-width: 960px) { .vinyl-wrap { width: 220px; height: 220px; } }
+@media (max-width: 640px) { .vinyl-wrap { width: 190px; height: 190px; } }

@@ -1,0 +1,25 @@
+╔══════════════════════════════════════════════════════════════╗
+║              DiskTop — Instruções de Música                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+Coloque seus arquivos de áudio NESTA PASTA com os nomes abaixo.
+Formatos aceitos: .mp3  |  .ogg  |  .wav
+
+NOMES ESPERADOS:
+  01_kiss_i_was_made_for_lovin_you.mp3
+  02_tame_impala_let_it_happen.mp3
+  03_a_flock_of_seagulls_i_ran.mp3
+  04_michael_jackson_billie_jean.mp3
+  05_eiffel_65_blue.mp3
+  06_aha_take_on_me.mp3
+  07_new_order_blue_monday.mp3
+  08_guns_n_roses_sweet_child_o_mine.mp3
+  09_toto_africa.mp3
+  10_simple_minds_dont_you.mp3
+
+Após adicionar os arquivos, clique em ▶ no player para tocar.
+O jogo detecta automaticamente quando o arquivo está disponível.
+
+Se quiser trocar o nome do arquivo, edite:
+  src/data/songs.js  →  campo "file" de cada música.
+══════════════════════════════════════════════════════════════
